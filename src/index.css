@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-gray-100;
+  }
+}
+
+@layer components {
+  .enemy-face {
+    @apply relative;
+  }
+  
+  .enemy-face::before, .enemy-face::after {
+    @apply content-[''] absolute w-1 h-1 bg-black rounded-full;
+  }
+  
+  .enemy-face::before {
+    @apply left-1;
+  }
+  
+  .enemy-face::after {
+    @apply right-1;
+  }
+}
